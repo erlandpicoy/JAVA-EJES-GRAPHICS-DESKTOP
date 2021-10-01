@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Java Graphic:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Java_Graphic_jar</output-path>
+    <root id="archive" name="Java Graphic.jar">
+      <element id="module-output" name="Java Graphic" />
+      <element id="module-test-output" name="Java Graphic" />
+    </root>
+  </artifact>
+</component>
