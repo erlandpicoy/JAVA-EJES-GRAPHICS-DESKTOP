@@ -6,9 +6,12 @@ import java.awt.event.*;
 public class EjercicioN8 extends JFrame implements ActionListener {
 
     private JMenuBar menubar;
-    private JMenu menu1,menu1_sub1,menu1_sub2;
-    private JMenu menu2,menu2_sub1,menu2_sub2;
-    private JMenuItem menuitem1,menuitem2,menuitem3,menuitem4;
+    private JMenu m1, m2;
+    private JMenu m1_s1,m1_s2;
+    private JMenu m1_s1_s1,m1_s1_s2;
+    private JMenuItem m1_s1_s1_i1,m1_s1_s1_i2;
+    private JMenuItem m1_s1_s2_i1,m1_s1_s2_i2;
+
 
     private JLabel label1;
     private JLabel label2;
@@ -23,30 +26,36 @@ public class EjercicioN8 extends JFrame implements ActionListener {
         menubar= new JMenuBar();
         setJMenuBar(menubar);
 
-        menu1 = new JMenu("Archivo");
-        menubar.add(menu1);
+        m1 = new JMenu("Archivo");
+        menubar.add(m1);
 
-        submenu1 = new JMenu("Nuevo");
-        menu1.add(submenu1);
+        m1_s1 = new JMenu("Nuevo");
+        m1.add(m1_s1);
 
-        submenu2 = new JMenu("Opciones");
-        menu1.add(submenu2);
+        m1_s2 = new JMenu("Opciones");
+        m1.add(m1_s2);
 
-        menuitem1 = new JMenuItem("600*400");
-        submenu2.add(menuitem1);
-        menuitem1.addActionListener(this);
+        m1_s1_s1 = new JMenu("Resolucion");
+        m1_s2.add(m1_s1_s1);
 
-        menuitem2 = new JMenuItem("300*400");
-        submenu2.add(menuitem2);
-        menuitem1.addActionListener(this);
+        m1_s1_s2 = new JMenu("Color Pantalla");
+        m1_s2.add(m1_s1_s2);
 
-        menuitem3 = new JMenuItem("Fondo Rojo");
-        submenu1.add(menuitem3);
-        menuitem3.addActionListener(this);
+        m1_s1_s1_i1 = new JMenuItem("600*400");
+        m1_s1_s1.add(m1_s1_s1_i1);
+        m1_s1_s1_i1.addActionListener(this);
 
-        menuitem4 = new JMenuItem("Fondo Azul");
-        submenu1.add(menuitem4);
-        menuitem4.addActionListener(this);
+        m1_s1_s1_i2 = new JMenuItem("300*400");
+        m1_s1_s1.add(m1_s1_s1_i2);
+        m1_s1_s1_i2.addActionListener(this);
+
+        m1_s1_s2_i1 = new JMenuItem("Fondo Rojo");
+        m1_s1_s2.add(m1_s1_s2_i1);
+        m1_s1_s2_i1.addActionListener(this);
+
+        m1_s1_s2_i2 = new JMenuItem("Fondo Azul");
+        m1_s1_s2.add( m1_s1_s2_i2);
+        m1_s1_s2_i2.addActionListener(this);
 
 
             label1 = new JLabel("ROJO");
@@ -68,19 +77,29 @@ public class EjercicioN8 extends JFrame implements ActionListener {
         }
 
     public void actionPerformed(ActionEvent e) {
-        if (e.getSource() == menuitem1 ) {
+        if (e.getSource() == m1_s1_s1_i1 ) {
             setSize(600,400);
 
+        }
+
+        if (e.getSource() == m1_s1_s1_i2 ) {
+            setSize(400,300);
+        }
+
+        if (e.getSource() == m1_s1_s2_i1 ) {
+            getContentPane().setBackground(new Color(255,0,0) );
+        }
+
+        if (e.getSource() == m1_s1_s2_i2) {
+            getContentPane().setBackground(new Color(0,0,255) );
         }
     }
 
     public static void main( String []args){
-
         EjercicioN8 formulario1= new EjercicioN8();
         formulario1.setBounds(0,0,200,250);
         formulario1.setVisible(true);
         formulario1.setResizable(false);
         formulario1.setLocationRelativeTo(null);
-
     }
 }
