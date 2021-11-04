@@ -30,7 +30,7 @@ public class EjercicioN9 extends JFrame implements ActionListener, ChangeListene
         if (e.getSource() == boton1){
             System.exit(0);
         }
-        
+
     }
 
     @Override

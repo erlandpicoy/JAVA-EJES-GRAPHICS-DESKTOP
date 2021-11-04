@@ -13,7 +13,7 @@ public class EjercicioN7 extends JFrame implements ActionListener {
     private JComboBox combo3;
 
 
-    public EjercicioN6 (){
+    public EjercicioN7 (){
 
         setLayout(null);
 
